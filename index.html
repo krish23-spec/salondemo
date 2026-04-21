@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <meta name="description" content="Star Saloon & Academy - Premium unisex salon, bridal makeup, hair studio & certified beauty academy. Book appointments & courses.">
+  <meta name="keywords" content="Star Saloon, Beauty Academy, Hair Salon, Makeup Studio, Bridal Makeup, Haircut, Skincare, Beauty Courses">
+  <meta name="author" content="Star Saloon & Academy">
+  <meta name="robots" content="index, follow">
+  <title>Star Saloon & Academy | Luxury Grooming & Beauty Academy</title>
+  
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- AOS Animation -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- Lightbox -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet">
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: #0a0806;
+      color: #1e1b18;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4, .serif {
+      font-family: 'Cormorant Garamond', serif;
+    }
+
+    /* Premium Dark-Light Theme */
+    .bg-dark-premium {
+      background: #0f0d0b;
+    }
+    .bg-cream {
+      background: #faf6f0;
+    }
+    .bg-gold-light {
+      background: linear-gradient(135deg, #f3e9dc 0%, #ede0d0 100%);
+    }
+    
+    /* ========== FULLY RESPONSIVE NAVBAR ========== */
+    .navbar-premium {
+      background: rgba(15, 13, 11, 0.95);
+      backdrop-filter: blur(12px);
+      padding: 1rem 0;
+      transition: all 0.3s;
+      border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+    }
+    
+    .navbar-premium .navbar-brand {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #d4af37 !important;
+      letter-spacing: 1px;
+      white-space: normal;
+    }
+    
+    .navbar-premium .navbar-brand i {
+      font-size: 1.3rem;
+    }
+    
+    .navbar-premium .nav-link {
+      color: #e8e0d5;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      margin: 0 0.3rem;
+      transition: 0.3s;
+      font-size: 0.95rem;
+    }
+    
+    .navbar-premium .nav-link:hover {
+      color: #d4af37;
+    }
+    
+    /* Custom Toggler */
+    .navbar-toggler-premium {
+      border: 1px solid #d4af37;
+      background: transparent;
+      padding: 8px 12px;
+      border-radius: 4px;
+    }
+    
+    .navbar-toggler-premium:focus {
+      box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.3);
+      outline: none;
+    }
+    
+    .navbar-toggler-premium .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23d4af37' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    }
+    
+    /* Mobile Menu Styles */
+    @media (max-width: 991px) {
+      .navbar-premium {
+        padding: 0.8rem 0;
+      }
+      
+      .navbar-premium .navbar-brand {
+        font-size: 1.2rem;
+      }
+      
+      .navbar-premium .navbar-brand i {
+        font-size: 1.1rem;
+      }
+      
+      .navbar-collapse {
+        background: rgba(15, 13, 11, 0.98);
+        padding: 1rem;
+        border-radius: 8px;
+        margin-top: 0.8rem;
+        border: 1px solid rgba(212, 175, 55, 0.2);
+      }
+      
+      .navbar-premium .nav-link {
+        padding: 0.7rem 0;
+        margin: 0;
+        text-align: center;
+        border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+      }
+      
+      .navbar-premium .nav-link:last-child {
+        border-bottom: none;
+      }
+      
+      .navbar-premium .btn-outline-gold {
+        display: block;
+        text-align: center;
+        margin-top: 0.8rem;
+        width: 100%;
+      }
+    }
+    
+    /* Tablet specific */
+    @media (min-width: 768px) and (max-width: 991px) {
+      .navbar-premium .navbar-brand {
+        font-size: 1.4rem;
+      }
+      
+      .navbar-premium .nav-link {
+        font-size: 1rem;
+      }
+    }
+    
+    /* Desktop large */
+    @media (min-width: 1200px) {
+      .navbar-premium .navbar-brand {
+        font-size: 1.8rem;
+      }
+      
+      .navbar-premium .nav-link {
+        font-size: 1rem;
+        margin: 0 0.5rem;
+      }
+    }
+    
+    /* Buttons */
+    .btn-gold {
+      background: #d4af37;
+      color: #0f0d0b;
+      border-radius: 0;
+      padding: 12px 36px;
+      font-weight: 600;
+      transition: 0.3s;
+      border: none;
+      letter-spacing: 1px;
+    }
+    .btn-gold:hover {
+      background: #b8942e;
+      color: #fff;
+      transform: translateY(-2px);
+    }
+    .btn-outline-gold {
+      border: 2px solid #d4af37;
+      background: transparent;
+      color: #d4af37;
+      border-radius: 0;
+      padding: 10px 32px;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+    .btn-outline-gold:hover {
+      background: #d4af37;
+      color: #0f0d0b;
+      transform: translateY(-2px);
+    }
+    
+    /* Hero Section */
+    .hero-premium {
+      background: linear-gradient(135deg, #0f0d0b 0%, #1a1612 100%);
+      min-height: 90vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-premium::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('https://images.pexels.com/photos/3993449/pexels-photo-3993449.jpeg?auto=compress') center/cover;
+      opacity: 0.15;
+      pointer-events: none;
+    }
+    .gold-text {
+      color: #d4af37;
+    }
+    .hero-title {
+      font-size: 4.5rem;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+    
+    /* Responsive Hero */
+    @media (max-width: 768px) {
+      .hero-title {
+        font-size: 2.5rem;
+      }
+      .hero-premium {
+        min-height: auto;
+        padding: 100px 0 60px;
+      }
+    }
+    
+    @media (min-width: 769px) and (max-width: 1024px) {
+      .hero-title {
+        font-size: 3.5rem;
+      }
+    }
+    
+    /* Cards */
+    .service-card-premium {
+      background: #ffffff;
+      border-radius: 4px;
+      padding: 2rem;
+      text-align: center;
+      transition: all 0.4s;
+      height: 100%;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+      border-bottom: 3px solid transparent;
+    }
+    .service-card-premium:hover {
+      transform: translateY(-8px);
+      border-bottom-color: #d4af37;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    }
+    .service-icon-premium {
+      font-size: 2.8rem;
+      color: #d4af37;
+      margin-bottom: 1.2rem;
+    }
+    .price {
+      color: #b8942e;
+      font-weight: 700;
+      margin-top: 12px;
+      font-size: 1.1rem;
+    }
+    
+    /* Testimonial Cards */
+    .testimonial-premium {
+      background: #fff;
+      padding: 2rem;
+      border-radius: 4px;
+      height: 100%;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+      transition: 0.3s;
+    }
+    .testimonial-premium:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    }
+    .quote-icon {
+      color: #d4af37;
+      font-size: 2rem;
+      opacity: 0.5;
+      margin-bottom: 1rem;
+    }
+    .rating i {
+      color: #ffc107;
+      margin-right: 2px;
+    }
+    
+    /* Gallery */
+    .gallery-premium {
+      position: relative;
+      overflow: hidden;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .gallery-premium img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+      transition: 0.5s;
+    }
+    .gallery-premium:hover img {
+      transform: scale(1.05);
+    }
+    .gallery-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+      padding: 20px;
+      color: white;
+      opacity: 0;
+      transition: 0.3s;
+    }
+    .gallery-premium:hover .gallery-overlay {
+      opacity: 1;
+    }
+    
+    /* Responsive Gallery */
+    @media (max-width: 768px) {
+      .gallery-premium img {
+        height: 220px;
+      }
+    }
+    
+    /* Form */
+    .form-premium {
+      background: #fff;
+      padding: 2rem;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+    }
+    @media (max-width: 768px) {
+      .form-premium {
+        padding: 1.5rem;
+      }
+    }
+    
+    .form-control-premium {
+      border-radius: 0;
+      border: 1px solid #e0d6cc;
+      padding: 12px 20px;
+      background: #fefcf9;
+    }
+    .form-control-premium:focus {
+      border-color: #d4af37;
+      box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
+    }
+    
+    /* WhatsApp Float */
+    .whatsapp-float-premium {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: #25D366;
+      color: white;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 32px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+      z-index: 999;
+      transition: 0.3s;
+      text-decoration: none;
+    }
+    .whatsapp-float-premium:hover {
+      transform: scale(1.1);
+      background: #128C7E;
+      color: white;
+    }
+    
+    @media (max-width: 768px) {
+      .whatsapp-float-premium {
+        width: 50px;
+        height: 50px;
+        font-size: 26px;
+        bottom: 20px;
+        right: 20px;
+      }
+    }
+    
+    footer {
+      background: #0a0806;
+      color: #a89f94;
+      border-top: 1px solid rgba(212, 175, 55, 0.2);
+    }
+    
+    .section-title {
+      font-size: 3rem;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+    }
+    
+    @media (max-width: 768px) {
+      .section-title {
+        font-size: 2rem;
+      }
+      .service-card-premium {
+        padding: 1.5rem;
+      }
+      .testimonial-premium {
+        padding: 1.5rem;
+      }
+    }
+    
+    @media (min-width: 769px) and (max-width: 1024px) {
+      .section-title {
+        font-size: 2.5rem;
+      }
+    }
+    
+    /* Row spacing */
+    .row {
+      margin-right: 0;
+      margin-left: 0;
+    }
+    
+    .container {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    
+    @media (max-width: 576px) {
+      .container {
+        padding-left: 16px;
+        padding-right: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Floating WhatsApp -->
+<a href="https://wa.me/919876543210?text=Hello%20Star%20Saloon%20%26%20Academy!%20I'd%20like%20to%20book%20an%20appointment." class="whatsapp-float-premium" target="_blank">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<!-- ========== FULLY RESPONSIVE NAVBAR ========== -->
+<nav class="navbar navbar-expand-lg navbar-premium fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="#home">
+      <i class="fas fa-star-of-life me-2"></i> STAR SALOON
+    </a>
+    <button class="navbar-toggler navbar-toggler-premium" type="button" data-bs-toggle="collapse" data-bs-target="#navPremium" aria-controls="navPremium" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navPremium">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link" href="#home">HOME</a></li>
+        <li class="nav-item"><a class="nav-link" href="#services">SERVICES</a></li>
+        <li class="nav-item"><a class="nav-link" href="#academy">ACADEMY</a></li>
+        <li class="nav-item"><a class="nav-link" href="#gallery">GALLERY</a></li>
+        <li class="nav-item"><a class="nav-link" href="#testimonials">REVIEWS</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">ENQUIRY</a></li>
+      </ul>
+      <a href="#contact" class="btn btn-outline-gold ms-lg-3">BOOK NOW</a>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section id="home" class="hero-premium">
+  <div class="container">
+    <div class="row align-items-center min-vh-100 py-5">
+      <div class="col-lg-7 text-white" data-aos="fade-up" data-aos-duration="1000">
+        <span class="badge bg-gold-light text-dark mb-3 px-3 py-2" style="background: #d4af37; color:#0f0d0b;">EST. 2015 • LUXURY SALON</span>
+        <h1 class="hero-title mt-3">Where <span class="gold-text">Glamour</span> Meets<br>Professional <span class="gold-text">Excellence</span></h1>
+        <p class="lead mt-4 opacity-75">Premium unisex salon & certified beauty academy. Experience world-class grooming or launch your beauty career with us.</p>
+        <div class="mt-4 d-flex gap-3 flex-wrap">
+          <a href="#contact" class="btn btn-gold"><i class="fab fa-whatsapp me-2"></i> Book Appointment</a>
+          <a href="#gallery" class="btn btn-outline-gold">View Gallery →</a>
+        </div>
+        <div class="row mt-5 g-4">
+          <div class="col-4"><h3 class="fw-bold text-gold">5k+</h3><p class="small opacity-75">Happy Clients</p></div>
+          <div class="col-4"><h3 class="fw-bold text-gold">50+</h3><p class="small opacity-75">Expert Stylists</p></div>
+          <div class="col-4"><h3 class="fw-bold text-gold">15+</h3><p class="small opacity-75">Courses</p></div>
+        </div>
+      </div>
+      <div class="col-lg-5 d-none d-lg-block" data-aos="fade-left" data-aos-duration="1000">
+        <img src="https://images.pexels.com/photos/3993449/pexels-photo-3993449.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Luxury Salon" class="img-fluid shadow-lg" style="border-radius: 4px;">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Services Section -->
+<section id="services" class="py-5 bg-cream">
+  <div class="container py-5">
+    <div class="text-center mb-5" data-aos="fade-up">
+      <span class="text-uppercase small fw-bold text-dark opacity-50">Premium Treatments</span>
+      <h2 class="section-title mt-2">Our Signature <span class="gold-text">Services</span></h2>
+      <p class="lead w-75 mx-auto">Luxury grooming with international standards and expert care.</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="100"><div class="service-card-premium"><i class="fas fa-cut service-icon-premium"></i><h4 class="fw-bold">Hair Studio</h4><p>Trendy cuts, hair spa, keratin, global color & scalp treatments.</p><div class="price">From ₹499</div></div></div>
+      <div class="col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="150"><div class="service-card-premium"><i class="fas fa-paint-brush service-icon-premium"></i><h4 class="fw-bold">Bridal Makeup</h4><p>Airbrush, HD makeup, engagement looks with free trial.</p><div class="price">From ₹7,999</div></div></div>
+      <div class="col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="200"><div class="service-card-premium"><i class="fas fa-spa service-icon-premium"></i><h4 class="fw-bold">Skincare & Facials</h4><p>Gold facial, anti-aging, men's grooming & beard shaping.</p><div class="price">From ₹899</div></div></div>
+      <div class="col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="250"><div class="service-card-premium"><i class="fas fa-hand-sparkles service-icon-premium"></i><h4 class="fw-bold">Nail Art & Extensions</h4><p>Gel nails, acrylic extensions, manicure & pedicure.</p><div class="price">From ₹599</div></div></div>
+      <div class="col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="300"><div class="service-card-premium"><i class="fas fa-chalkboard-user service-icon-premium"></i><h4 class="fw-bold">Academy Courses</h4><p>Makeup, hairstyling, salon management with placement.</p><div class="price">Enquire Now</div></div></div>
+      <div class="col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="350"><div class="service-card-premium"><i class="fas fa-calendar-alt service-icon-premium"></i><h4 class="fw-bold">Bridal Packages</h4><p>Complete wedding looks, group discounts & trials.</p><div class="price">Custom</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- Academy Section -->
+<section id="academy" class="py-5 bg-dark-premium text-white">
+  <div class="container py-5">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-6" data-aos="fade-right">
+        <img src="https://images.pexels.com/photos/3812743/pexels-photo-3812743.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Academy Training" class="img-fluid shadow" style="border-radius: 4px; width:100%;">
+      </div>
+      <div class="col-lg-6" data-aos="fade-left">
+        <span class="badge bg-gold-light text-dark mb-3 px-3 py-2" style="background:#d4af37;">Star Academy</span>
+        <h2 class="section-title">Become a Certified <span class="gold-text">Beauty Professional</span></h2>
+        <p class="lead mt-3 opacity-75">Industry-recognized diploma & short-term courses. Learn from celebrity stylists with practical training.</p>
+        <ul class="list-unstyled mt-4">
+          <li class="mb-3"><i class="fas fa-check-circle gold-text me-2"></i> Advanced Makeup Artistry (6 Weeks)</li>
+          <li class="mb-3"><i class="fas fa-check-circle gold-text me-2"></i> Hair Styling & Texture Course</li>
+          <li class="mb-3"><i class="fas fa-check-circle gold-text me-2"></i> Salon Management & Business</li>
+          <li class="mb-3"><i class="fas fa-check-circle gold-text me-2"></i> 100% Hands-on & Internship</li>
+        </ul>
+        <a href="#contact" class="btn btn-gold mt-3"><i class="fab fa-whatsapp me-2"></i> Enquire Now</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Gallery Section -->
+<section id="gallery" class="py-5 bg-cream">
+  <div class="container py-5">
+    <div class="text-center mb-5" data-aos="fade-up">
+      <span class="text-uppercase small fw-bold">Our Portfolio</span>
+      <h2 class="section-title">Glimpses of <span class="gold-text">Star Studio</span></h2>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-4 col-sm-6" data-aos="zoom-in" data-aos-delay="100"><div class="gallery-premium"><a href="https://images.pexels.com/photos/3991847/pexels-photo-3991847.jpeg?auto=compress&cs=tinysrgb&w=800" data-lightbox="gallery"><img src="https://images.pexels.com/photos/3991847/pexels-photo-3991847.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Bridal"><div class="gallery-overlay"><i class="fas fa-search-plus me-2"></i> Bridal Makeover</div></a></div></div>
+      <div class="col-md-4 col-sm-6" data-aos="zoom-in" data-aos-delay="150"><div class="gallery-premium"><a href="https://images.pexels.com/photos/3998425/pexels-photo-3998425.jpeg?auto=compress&cs=tinysrgb&w=800" data-lightbox="gallery"><img src="https://images.pexels.com/photos/3998425/pexels-photo-3998425.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Hair Color"><div class="gallery-overlay"><i class="fas fa-search-plus me-2"></i> Hair Color</div></a></div></div>
+      <div class="col-md-4 col-sm-6" data-aos="zoom-in" data-aos-delay="200"><div class="gallery-premium"><a href="https://images.pexels.com/photos/3993449/pexels-photo-3993449.jpeg?auto=compress&cs=tinysrgb&w=800" data-lightbox="gallery"><img src="https://images.pexels.com/photos/3993449/pexels-photo-3993449.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Styling"><div class="gallery-overlay"><i class="fas fa-search-plus me-2"></i> Hair Styling</div></a></div></div>
+      <div class="col-md-4 col-sm-6" data-aos="zoom-in" data-aos-delay="250"><div class="gallery-premium"><a href="https://images.pexels.com/photos/3783066/pexels-photo-3783066.jpeg?auto=compress&cs=tinysrgb&w=800" data-lightbox="gallery"><img src="https://images.pexels.com/photos/3783066/pexels-photo-3783066.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Men Grooming"><div class="gallery-overlay"><i class="fas fa-search-plus me-2"></i> Men's Grooming</div></a></div></div>
+      <div class="col-md-4 col-sm-6" data-aos="zoom-in" data-aos-delay="300"><div class="gallery-premium"><a href="https://images.pexels.com/photos/3993446/pexels-photo-3993446.jpeg?auto=compress&cs=tinysrgb&w=800" data-lightbox="gallery"><img src="https://images.pexels.com/photos/3993446/pexels-photo-3993446.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Academy"><div class="gallery-overlay"><i class="fas fa-search-plus me-2"></i> Academy Session</div></a></div></div>
+      <div class="col-md-4 col-sm-6" data-aos="zoom-in" data-aos-delay="350"><div class="gallery-premium"><a href="https://images.pexels.com/photos/3991784/pexels-photo-3991784.jpeg?auto=compress&cs=tinysrgb&w=800" data-lightbox="gallery"><img src="https://images.pexels.com/photos/3991784/pexels-photo-3991784.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Nail Art"><div class="gallery-overlay"><i class="fas fa-search-plus me-2"></i> Nail Art</div></a></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials Section -->
+<section id="testimonials" class="py-5 bg-dark-premium text-white">
+  <div class="container py-5">
+    <div class="text-center mb-5" data-aos="fade-up">
+      <span class="text-uppercase small gold-text">Client Love</span>
+      <h2 class="section-title">What Our <span class="gold-text">Customers Say</span></h2>
+      <p>Trusted by 5000+ clients • Google Rated 4.9 ★</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="100"><div class="testimonial-premium bg-white text-dark"><div class="quote-icon"><i class="fas fa-quote-left"></i></div><div class="rating mb-2"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><p class="fst-italic">"Absolutely flawless bridal makeup! The team was professional and made me look like a dream. Best decision ever."</p><div class="d-flex align-items-center mt-3"><img src="https://randomuser.me/api/portraits/women/68.jpg" class="rounded-circle me-3" width="50" height="50"><div><strong>Neha Sharma</strong><br><small>Bridal Client</small></div></div></div></div>
+      <div class="col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="150"><div class="testimonial-premium bg-white text-dark"><div class="quote-icon"><i class="fas fa-quote-left"></i></div><div class="rating mb-2"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><p class="fst-italic">"Completed my makeup course from Star Academy. Now I run my own studio. The trainers are industry experts!"</p><div class="d-flex align-items-center mt-3"><img src="https://randomuser.me/api/portraits/women/33.jpg" class="rounded-circle me-3" width="50" height="50"><div><strong>Anjali Verma</strong><br><small>Graduate</small></div></div></div></div>
+      <div class="col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="200"><div class="testimonial-premium bg-white text-dark"><div class="quote-icon"><i class="fas fa-quote-left"></i></div><div class="rating mb-2"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><p class="fst-italic">"Best haircut and grooming experience. Very hygienic and premium ambiance. My regular salon now!"</p><div class="d-flex align-items-center mt-3"><img src="https://randomuser.me/api/portraits/men/45.jpg" class="rounded-circle me-3" width="50" height="50"><div><strong>Rohit Mehta</strong><br><small>Regular Client</small></div></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact & Enquiry Section -->
+<section id="contact" class="py-5 bg-cream">
+  <div class="container py-5">
+    <div class="row justify-content-center">
+      <div class="col-lg-8" data-aos="fade-up">
+        <div class="form-premium">
+          <div class="text-center mb-4">
+            <i class="fas fa-envelope-open-text fa-3x gold-text"></i>
+            <h2 class="section-title mt-3">Book Your <span class="gold-text">Appointment</span></h2>
+            <p>Fill the form — we'll respond on <strong class="text-success">WhatsApp</strong> within minutes!</p>
+          </div>
+          <form id="whatsappFormPremium">
+            <div class="row g-3">
+              <div class="col-md-6"><input type="text" class="form-control form-control-premium" id="premiumName" placeholder="Full Name *" required></div>
+              <div class="col-md-6"><input type="tel" class="form-control form-control-premium" id="premiumMobile" placeholder="WhatsApp Number *" required></div>
+              <div class="col-md-6"><select class="form-select form-control-premium" id="premiumService" required><option value="" disabled selected>Select Service</option><option>Hair Styling / Cut</option><option>Bridal Makeup</option><option>Skincare & Facial</option><option>Academy Course</option><option>Nail Art</option><option>General Enquiry</option></select></div>
+              <div class="col-md-6"><input type="text" class="form-control form-control-premium" id="premiumDate" placeholder="Preferred Date (optional)"></div>
+              <div class="col-12"><textarea class="form-control form-control-premium" rows="3" id="premiumMessage" placeholder="Your message / requirements..."></textarea></div>
+              <div class="col-12 text-center mt-3"><button type="submit" class="btn btn-gold px-5 py-3"><i class="fab fa-whatsapp me-2"></i> Send via WhatsApp</button></div>
+            </div>
+          </form>
+          <div id="premiumStatus" class="alert mt-3 d-none"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="pt-5 pb-4">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-md-5"><h4 class="text-gold mb-3"><i class="fas fa-star-of-life me-2"></i> Star Saloon & Academy</h4><p>Luxury unisex salon & certified beauty academy. Transforming looks & careers since 2015.</p><p><i class="fab fa-whatsapp me-2"></i> +91 98765 43210<br><i class="fas fa-map-marker-alt me-2"></i> 123, Glam Street, City Center</p></div>
+      <div class="col-md-3"><h5 class="text-gold mb-3">Quick Links</h5><ul class="list-unstyled"><li><a href="#home" class="text-decoration-none text-secondary">Home</a></li><li><a href="#services" class="text-decoration-none text-secondary">Services</a></li><li><a href="#academy" class="text-decoration-none text-secondary">Academy</a></li><li><a href="#gallery" class="text-decoration-none text-secondary">Gallery</a></li><li><a href="#contact" class="text-decoration-none text-secondary">Contact</a></li></ul></div>
+      <div class="col-md-4"><h5 class="text-gold mb-3">Opening Hours</h5><p>Mon-Sat: 10:00 AM – 8:00 PM<br>Sunday: 11:00 AM – 5:00 PM</p><div class="mt-3"><a href="#" class="text-white me-3 fs-5 opacity-75"><i class="fab fa-instagram"></i></a><a href="#" class="text-white me-3 fs-5 opacity-75"><i class="fab fa-facebook"></i></a><a href="#" class="text-white fs-5 opacity-75"><i class="fab fa-youtube"></i></a></div></div>
+    </div>
+    <hr class="mt-4 opacity-25"><p class="text-center text-secondary small">© 2025 Star Saloon & Academy | Luxury Grooming | All Rights Reserved</p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({ duration: 800, once: true, offset: 100 });
+  
+  const form = document.getElementById('whatsappFormPremium');
+  const statusDiv = document.getElementById('premiumStatus');
+  const BUSINESS_NUMBER = "919876543210";
+  
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    const name = document.getElementById('premiumName').value.trim();
+    const mobile = document.getElementById('premiumMobile').value.trim();
+    const service = document.getElementById('premiumService').value;
+    const date = document.getElementById('premiumDate').value;
+    const msg = document.getElementById('premiumMessage').value.trim();
+    
+    if (!name || !mobile || !service) {
+      statusDiv.innerHTML = '<div class="alert alert-danger">Please fill all required fields.</div>';
+      statusDiv.classList.remove('d-none');
+      setTimeout(() => statusDiv.classList.add('d-none'), 3000);
+      return;
+    }
+    
+    let message = `🌟 *Star Saloon Enquiry* 🌟%0A%0A*Name:* ${name}%0A*WhatsApp:* ${mobile}%0A*Service:* ${service}%0A`;
+    if (date) message += `*Preferred Date:* ${date}%0A`;
+    if (msg) message += `*Message:* ${msg}%0A`;
+    message += `%0A_From website enquiry_`;
+    
+    window.open(`https://wa.me/${BUSINESS_NUMBER}?text=${message}`, '_blank');
+    statusDiv.innerHTML = '<div class="alert alert-success">Redirecting to WhatsApp...</div>';
+    statusDiv.classList.remove('d-none');
+    setTimeout(() => { form.reset(); statusDiv.classList.add('d-none'); }, 4000);
+  });
+</script>
+</body>
+</html>
